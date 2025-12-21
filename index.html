@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noor</title>
+  <meta name="description" content="Noor — prayer times, reminders, listening, events, and resources." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Noor home">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">Noor</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="active-link">Home</a>
+        <a href="prayer-times.html">Prayer Times</a>
+        <a href="learn.html">Learn</a>
+        <a href="resources.html">Resources</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1) HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">A calm, modern space</p>
+          <h1 class="hero-title">Welcome to <span class="accent">Noor</span></h1>
+          <p class="hero-subtitle">
+            Prayer times, reminders, listening, and community updates—designed with clarity and respect.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="prayer-times.html">Prayer Times</a>
+            <a class="btn" href="#listen">Listen</a>
+            <a class="btn" href="#events">Events</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="arabic">ٱلسَّلَامُ عَلَيْكُمْ</span>
+            <span class="muted">Peace be upon you</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <span class="pill">Daily reminder</span>
+              <span class="muted" id="todayDate">—</span>
+            </div>
+            <p class="arabic big" id="heroArabic">—</p>
+            <p class="muted" id="heroEnglish">—</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) PRAYER (Preview + Link to Full Page) -->
+    <section class="section" id="prayer">
+      <div class="container">
+        <div class="section-head">
+          <h2>Prayer Times</h2>
+          <p class="muted">Today’s times and the next prayer countdown.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="row space-between">
+              <h3 class="card-title">Next Prayer</h3>
+
+              <div class="segmented" role="group" aria-label="Location selector">
+                <button class="seg-btn active" type="button" data-location="London">London</button>
+                <button class="seg-btn" type="button" data-location="Birmingham">Birmingham</button>
+              </div>
+            </div>
+
+            <div class="next-prayer">
+              <div>
+                <p class="muted">Next</p>
+                <p class="big" id="nextPrayerName">—</p>
+              </div>
+              <div>
+                <p class="muted">Time</p>
+                <p class="big" id="nextPrayerTime">—</p>
+              </div>
+              <div>
+                <p class="muted">Starts in</p>
+                <p class="big" id="countdown">—</p>
+              </div>
+            </div>
+
+            <a class="btn primary" href="prayer-times.html">Open Prayer Times</a>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Today’s Times</h3>
+            <ul class="prayer-list" id="prayerList" aria-live="polite"></ul>
+
+            <div class="divider"></div>
+
+            <h4 class="card-title-sm">Jumu’ah</h4>
+            <p class="muted small" id="jummahTimes">—</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) LISTEN -->
+    <section class="section alt" id="listen">
+      <div class="container">
+        <div class="section-head">
+          <h2>Listen</h2>
+          <p class="muted">Choose a reciter to open the player.</p>
+        </div>
+
+        <div class="grid three">
+          <button class="card card-btn" type="button"
+                  data-reciter="Reciter One"
+                  data-audio="assets/audio/recitation1.mp3">
+            <h3 class="card-title">Reciter One</h3>
+            <p class="muted small">Calm pace • Clear recitation</p>
+            <span class="pill">Play</span>
+          </button>
+
+          <button class="card card-btn" type="button"
+                  data-reciter="Reciter Two"
+                  data-audio="assets/audio/recitation2.mp3">
+            <h3 class="card-title">Reciter Two</h3>
+            <p class="muted small">Warm tone • Reflective</p>
+            <span class="pill">Play</span>
+          </button>
+
+          <button class="card card-btn" type="button"
+                  data-reciter="Reciter Three"
+                  data-audio="assets/audio/recitation3.mp3">
+            <h3 class="card-title">Reciter Three</h3>
+            <p class="muted small">Steady rhythm • Focused</p>
+            <span class="pill">Play</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) REMINDER -->
+    <section class="section" id="reminder">
+      <div class="container">
+        <div class="section-head">
+          <h2>Daily Reminder</h2>
+          <p class="muted">A short reminder for reflection.</p>
+        </div>
+
+        <div class="card reminder-card">
+          <p class="arabic big" id="reminderArabic">—</p>
+          <p class="muted" id="reminderEnglish">—</p>
+          <div class="row space-between">
+            <span class="muted small" id="reminderSource">—</span>
+            <button class="btn" type="button" id="newReminderBtn">New reminder</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) EVENTS -->
+    <section class="section alt" id="events">
+      <div class="container">
+        <div class="section-head">
+          <h2>Events</h2>
+          <p class="muted">Upcoming community activities and sessions.</p>
+        </div>
+
+        <div class="grid three" id="eventsGrid"></div>
+
+        <div class="row end">
+          <a class="btn primary" href="resources.html">View Resources</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) SUPPORT -->
+    <section class="section" id="support">
+      <div class="container">
+        <div class="section-head">
+          <h2>Support</h2>
+          <p class="muted">Support the work and keep the community growing.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3 class="card-title">One-off support</h3>
+            <p class="muted">Contribute once to help fund community activities and resources.</p>
+            <a class="btn primary" href="#">Give once</a>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Monthly support</h3>
+            <p class="muted">A steady contribution that supports ongoing work.</p>
+            <a class="btn" href="#">Give monthly</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand"><span class="brand-mark">✦</span> Noor</p>
+        <p class="muted small">Prayer • Learning • Listening • Community</p>
+      </div>
+
+      <div class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="prayer-times.html">Prayer Times</a>
+        <a href="learn.html">Learn</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Player -->
+  <div class="modal" id="playerModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Audio player">
+      <div class="row space-between">
+        <h3 class="card-title" id="modalTitle">Player</h3>
+        <button class="icon-btn" type="button" id="closeModalBtn" aria-label="Close">×</button>
+      </div>
+
+      <audio id="audioPlayer" controls preload="none" class="audio"></audio>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

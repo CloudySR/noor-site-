@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noor — Prayer Times</title>
+  <meta name="description" content="Noor — prayer times and next prayer countdown." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Noor home">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">Noor</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="prayer-times.html" class="active-link">Prayer Times</a>
+        <a href="learn.html">Learn</a>
+        <a href="resources.html">Resources</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Prayer Times</h2>
+        <p class="muted">Today’s times and the next prayer countdown.</p>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <div class="row space-between">
+            <h3 class="card-title">Next Prayer</h3>
+
+            <div class="segmented" role="group" aria-label="Location selector">
+              <button class="seg-btn active" type="button" data-location="London">London</button>
+              <button class="seg-btn" type="button" data-location="Birmingham">Birmingham</button>
+            </div>
+          </div>
+
+          <div class="next-prayer">
+            <div><p class="muted">Next</p><p class="big" id="nextPrayerName">—</p></div>
+            <div><p class="muted">Time</p><p class="big" id="nextPrayerTime">—</p></div>
+            <div><p class="muted">Starts in</p><p class="big" id="countdown">—</p></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Today’s Times</h3>
+          <ul class="prayer-list" id="prayerList" aria-live="polite"></ul>
+
+          <div class="divider"></div>
+
+          <h4 class="card-title-sm">Jumu’ah</h4>
+          <p class="muted small" id="jummahTimes">—</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand"><span class="brand-mark">✦</span> Noor</p>
+        <p class="muted small">Prayer • Learning • Listening • Community</p>
+      </div>
+
+      <div class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="prayer-times.html">Prayer Times</a>
+        <a href="learn.html">Learn</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
